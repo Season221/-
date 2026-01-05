@@ -1,0 +1,9 @@
+﻿  void.cpp
+  通讯录管理系统.cpp
+  正在运行 C/C++ 代码分析...
+  正在生成代码...
+  通讯录管理系统.vcxproj -> C:\Users\yy130\source\repos\c++\通讯录管理系统\x64\Debug\通讯录管理系统.exe
+C:\Users\yy130\source\repos\c++\通讯录管理系统\通讯录管理系统.cpp(158): warning C6262: 函数使用堆叠的 "128012" 字节。请考虑将一些数据移动到堆。
+C:\Users\yy130\source\repos\c++\通讯录管理系统\Head.h(20): warning C26495: 未初始化变量 Addressbook::m_Size。始终初始化成员变量(type.6)。
+C:\Users\yy130\source\repos\c++\通讯录管理系统\Head.h(13): warning C26495: 未初始化变量 Person::m_Age。始终初始化成员变量(type.6)。
+C:\Users\yy130\source\repos\c++\通讯录管理系统\Head.h(13): warning C26495: 未初始化变量 Person::m_Sex。始终初始化成员变量(type.6)。
