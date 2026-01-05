@@ -110,3 +110,81 @@ void deletePerson(struct Addressbook* abs) {
 		abs->m_Size--;
 		std::cout << "删除成功" << std::endl;
 }
+//查找联系人
+void findPerson(struct Addressbook* abs) {
+	if (abs->m_Size == 0) {
+		std::cout << "通讯录为空，无人可查找" << std::endl;
+		return;
+	}
+	std::cout << "请输入查找的姓名：" << std::endl;
+	std::string name;
+	std::cin >> name;
+	bool found = false;
+	for (int i = 0; i < abs->m_Size; i++) {
+		if (name == abs->personArray[i].m_Name) {
+			std::cout << "姓名；" << abs->personArray[i].m_Name << std::endl;
+			std::cout << "年龄：" << abs->personArray[i].m_Age << std::endl;
+			if (abs->personArray[i].m_Sex == 1) {
+				std::cout << "性别：男" << std::endl;
+			}
+			else {
+				std::cout << "性别：女" << std::endl;
+			}
+			std::cout << "电话号码：" << abs->personArray[i].m_Phone << std::endl;
+			std::cout << "地址：" << abs->personArray[i].m_Address << std::endl;
+			std::cout << "共有" << abs->m_Size << "个人" << std::endl;
+			found = true;//标记找到;
+			std::cout << "删除成功" << std::endl;
+		}
+	}
+	if (!found) {
+		std::cout << "没找到名叫 \"" << name << "\" 的人！\n";
+	}
+}
+//修改联系人
+void modifyPerson(struct Addressbook* abs) {
+	if (abs->m_Size == 0) {
+		std::cout << "通讯录为空，无法修改" << std::endl;
+		return;
+	}
+	std::cout << "请输入要修改的联系人姓名" << std:: endl;
+	std::string name;
+	std::cin >> name;
+
+	for (int i = 0; i < abs->m_Size; i++) {
+		if (name == abs->personArray[i].m_Name) {
+			std::cout << "请输入新的性别(1-男 2-女)：" << std::endl;
+			int sex;
+			std::cin >> sex;
+			while (sex != 1 && sex != 2) {
+				std::cout<<"输入错误请重新输入（1-男 2-女）：" << std::endl;
+				std::cin >> sex;
+			}
+			abs->personArray[i].m_Sex = sex;
+		}
+
+		std::cout << "请输入新的年龄：" << std::endl;
+		int age;
+		std::cin >> age;
+		abs->personArray[i].m_Age = age;
+
+		std::cout << "请输入新的电话：" << std::endl;
+		std::string phone;
+		std::cin >> phone;
+		abs->personArray[i].m_Phone = phone;
+
+		std::cout << "请输入新的地址：" << std::endl;
+		std::string address;
+		std::cin >> address;
+		abs->personArray[i].m_Address = address;
+
+		std::cout << "修改成功！" << std::endl;
+		return;
+	}
+	std::cout << "没找到名叫" << name << "的联系人，修改失败" << std::endl;
+}
+//清空联系人
+void cleanPerson(struct Addressbook* abs) {
+	abs->m_Size = 0;
+	std::cout << "通讯录已清空" << std::endl;
+}

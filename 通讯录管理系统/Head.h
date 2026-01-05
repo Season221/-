@@ -22,3 +22,6 @@ void showMenu();
 void addPerson(struct Addressbook* abs);
 void showPerson(struct Addressbook* abs);
 void deletePerson(struct Addressbook* abs);
+void findPerson(struct Addressbook* abs);
+void modifyPerson(struct Addressbook* abs);
+void cleanPerson(struct Addressbook* abs);

@@ -4,14 +4,14 @@
     <SFA>
       <FILEPATH>C:\Users\yy130\source\repos\c++\通讯录管理系统\</FILEPATH>
       <FILENAME>通讯录管理系统.cpp</FILENAME>
-      <LINE>158</LINE>
+      <LINE>196</LINE>
       <COLUMN>4</COLUMN>
     </SFA>
     <DEFECTCODE>6262</DEFECTCODE>
     <DESCRIPTION>函数使用堆叠的 "128012" 字节。请考虑将一些数据移动到堆。</DESCRIPTION>
     <FUNCTION>main</FUNCTION>
     <DECORATED>main</DECORATED>
-    <FUNCLINE>158</FUNCLINE>
+    <FUNCLINE>196</FUNCLINE>
     <PATH></PATH>
   </DEFECT>
   <DEFECT>
